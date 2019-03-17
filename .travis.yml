@@ -5,6 +5,7 @@ before_script:
 - bundle exec rake db:create --all
 - bundle exec rake db:migrate
 script:
+- rubocop
 - bundle exec rake ci:tests
 services:
 - postgresql
