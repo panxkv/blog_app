@@ -11,3 +11,13 @@ services:
 - postgresql
 notifications:
   email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: ImUDDv/IQ0az8TRD9eR2cfbFJuFmPKXZIueF+hNkBGmRh5UzA9dCrvK9M90tLhMPNImpw80tp0ZSKDMXlPGGCSowBxwJpYfh7qHBa9E9Yft1YqZANduJVpEhl4WwdV+TJkb/YriFK3b1SqcITMFhz9WYv2voVARZwI1+E4LwA7Qg5VqVtqTacwhwG4811EHIlSUXAOYCtwlzFANeM+yRZ8CvVJSn2MAa6KAvlCmUd+hjos8j7WGw2FPz2g/tgy6csxANdn4yOwaAUomWqPbJN1EFqntk5wORHpw/ELCvzdM3AebqArLL8vjM1N6Tw7zo2OL0NyDEuU7l1vxUBDSs6x2YdRzy4QsJSP+Twp/cgwMhoKQgVav7Hx5bF1+/fhpf92sc5OHtLXIvJ99jBbD+sLAtcsZO+mWvlXd950AhD3/D1g8nkYtliKqiwwlUMQdmNVuHD27cmOdbWqLFGh1A8GFaSF0Qk4IvrR3DQUmQxOxrOAiiFrlF3qJJnCvyHANY8JxXxzLHoXKYpJlQ14q+PkswXPqm/qwE1ACMo/nnm37dyHCeMvsN70brCmXgwz7v7NvWLpnSdwF7rlj988Ci788hymJAg/Ty7AHp67gMe30B+0mQmYianwoNMgIiX7UkwO6nUgufC/f9npZGnenkZYmjh34C6o18UzYo22LRTi4=
+  app:
+    master: custom-store-dev
+  on:
+    repo: panxkv/custom_store
+  run:
+  - rails db:migrate
