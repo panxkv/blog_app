@@ -24,8 +24,15 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
   gem 'spring'
+  gem 'pry'
+  gem 'pry-byebug'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'coveralls', require: false
+  gem 'database_cleaner'
   gem 'web-console', '>= 3.3.0'
 end
 

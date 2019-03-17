@@ -10,12 +10,17 @@ Bundler.require(*Rails.groups)
 
 module CustomStore
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    config.generators do |generator|
+      generator.system_tests false
+      generator.scaffold_stylesheet false
+      generator.stylesheets false
+      generator.view_specs false
+      generator.helper_specs false
+      generator.javascripts false
+      generator.assets = false
+      generator.helper = false
+    end
   end
 end
