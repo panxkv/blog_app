@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.5.3
+- 2.6.3
 before_script:
 - bundle exec rake db:create --all
 - bundle exec rake db:migrate
@@ -14,10 +14,10 @@ notifications:
 deploy:
   provider: heroku
   api_key:
-    secure: ImUDDv/IQ0az8TRD9eR2cfbFJuFmPKXZIueF+hNkBGmRh5UzA9dCrvK9M90tLhMPNImpw80tp0ZSKDMXlPGGCSowBxwJpYfh7qHBa9E9Yft1YqZANduJVpEhl4WwdV+TJkb/YriFK3b1SqcITMFhz9WYv2voVARZwI1+E4LwA7Qg5VqVtqTacwhwG4811EHIlSUXAOYCtwlzFANeM+yRZ8CvVJSn2MAa6KAvlCmUd+hjos8j7WGw2FPz2g/tgy6csxANdn4yOwaAUomWqPbJN1EFqntk5wORHpw/ELCvzdM3AebqArLL8vjM1N6Tw7zo2OL0NyDEuU7l1vxUBDSs6x2YdRzy4QsJSP+Twp/cgwMhoKQgVav7Hx5bF1+/fhpf92sc5OHtLXIvJ99jBbD+sLAtcsZO+mWvlXd950AhD3/D1g8nkYtliKqiwwlUMQdmNVuHD27cmOdbWqLFGh1A8GFaSF0Qk4IvrR3DQUmQxOxrOAiiFrlF3qJJnCvyHANY8JxXxzLHoXKYpJlQ14q+PkswXPqm/qwE1ACMo/nnm37dyHCeMvsN70brCmXgwz7v7NvWLpnSdwF7rlj988Ci788hymJAg/Ty7AHp67gMe30B+0mQmYianwoNMgIiX7UkwO6nUgufC/f9npZGnenkZYmjh34C6o18UzYo22LRTi4=
+    secure: "dQ6Qxh8Wwkq+LrPgEbXiIZ0Ku93SX+WbBZMLMp7zU76G1CcqgRGTtiAcBAg0g8tY62EmpPu9twgFXT4JJtl/DihyXsYdl1d+EhGMdkXkXc5x32nL/8AIL8ixmGuoXnfIhnMhG7KPeJAMf431LbM57H3g8OU4fmOBbX/1rQxQETUQwYjl5soUpB+ZZURgAffR+2Slq+e5HbIq9pbgdG4+3Cb7gIG4sxo8p8cKUSJW3cHIn1EPssy1AJEiO6wPwCFYMYIbcuuyHuDqBuHEs2OrRAqte7gQbCygPQFL7UAJ1vtKxw17Lg5q+iKjc+NX5MfycFggDneZ1ecsQiWwOYxz3856RksZGnTzfNzCCS452xoz16zNhw+YydGOYZUqMw9z4JmQ3+lbuTFA0yEDxrYw4qc+y9iksnbnDwEep8NvhIbosKrY9nomybycu4yra1AN6+pYWGq6ZrBhrLtCidURRqiGcuYF8eI3Cdjx9YyWR28bGSeV9wxyuup5BysFQ0KLm3D9BIR6731xYyDi0h0HuuXcFY5Fk0DSlTsk94HAcyJF7sIwtDsx/AbCoY3H0qKMt3dPx3UnYRH3g3w2F2dCVfWfy+I7KU9G82p/3VnI5L68F4P6D+sSfwKTVNE6/Zdb9mQsrYvGfj6N1Ce1lAn0fDbcz4DN0nSwgFWXapLclGQ="
   app:
-    master: custom-store-dev
+    master: blog-ann
   on:
-    repo: panxkv/custom_store
+    repo: panxkv/blog_app
   run:
   - rails db:migrate
